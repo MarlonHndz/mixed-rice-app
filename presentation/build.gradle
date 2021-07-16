@@ -59,10 +59,13 @@ dependencies {
     implementation Dependencies.material
     implementation Dependencies.navigationFragment
     implementation Dependencies.navigationUi
+    implementation Dependencies.constraintLayout
+    implementation Dependencies.cardView
+    implementation Dependencies.picasso
+    implementation Dependencies.swipeRefreshLayout
 
     // Test
     testImplementation TestDependencies.jUnit
     androidTestImplementation TestDependencies.jUnitExtAndroid
     androidTestImplementation TestDependencies.espressoTesting
-
 }

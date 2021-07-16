@@ -29,9 +29,16 @@ internal object Versions {
     // Background Strategy
     const val coroutinesVersion = "1.3.7"
 
+    // Gson
+    const val gsonVersion = "2.8.7"
+
     // UI
     const val materialVersion = "1.4.0"
     const val navigationVersion = "2.3.5"
+    const val constraintLayoutVersion = "2.0.4"
+    const val cardViewVersion = "1.0.0"
+    const val picassoVersion = "2.71828"
+    const val swipeRefreshLayoutVersion = "1.1.0"
 }
 
 object Dependencies {
@@ -65,10 +72,17 @@ object Dependencies {
     // Background Strategy
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}"
 
+    // Gson
+    const val gson = "com.google.code.gson:gson:${Versions.gsonVersion}"
+
     // UI
     const val material = "com.google.android.material:material:${Versions.materialVersion}"
     const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
+    const val constraintLayout ="androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+    const val cardView = "androidx.cardview:cardview:${Versions.cardViewVersion}"
+    const val picasso = "com.squareup.picasso:picasso:${Versions.picassoVersion}"
+    const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayoutVersion}"
 
 }
 

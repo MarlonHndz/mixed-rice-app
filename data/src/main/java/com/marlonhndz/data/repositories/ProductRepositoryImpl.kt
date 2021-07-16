@@ -13,6 +13,6 @@ class ProductRepositoryImpl(
     override suspend fun getProduct(): List<Product> {
         val productResponse = remoteDataSource.getProductList()
         localDataSource.insertProductList(productResponse)
-        return localDataSource.getProductList()
+        return productResponse
     }
 }

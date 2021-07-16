@@ -1,4 +1,4 @@
-package com.marlonhndz.presentation.ui.products
+package com.marlonhndz.presentation.ui
 
 import androidx.navigation.fragment.NavHostFragment
 import com.marlonhndz.presentation.R

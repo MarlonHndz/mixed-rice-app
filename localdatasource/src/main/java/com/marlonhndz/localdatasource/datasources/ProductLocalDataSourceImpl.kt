@@ -12,8 +12,12 @@ class ProductLocalDataSourceImpl(
     private val productToProductLocalMapper: ProductToProductLocalMapper
 ) : ProductLocalDataSource {
 
-    override suspend fun getProductList() =
-        productLocalToProductMapper(appDatabase.productDao().getAll())
+    override suspend fun getProductList(): List<Product> {
+        TODO("Not yet implemented")
+    }
+
+//    override suspend fun getProductList() =
+//        productLocalToProductMapper(appDatabase.productDao().getAll())
 
     override suspend fun insertProductList(listProduct: List<Product>) {
         appDatabase.productDao().insertAll(productToProductLocalMapper(listProduct))

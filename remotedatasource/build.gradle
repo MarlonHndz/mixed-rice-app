@@ -52,6 +52,9 @@ dependencies {
     // Background Strategy
     implementation Dependencies.coroutines
 
+    // GSON
+    implementation Dependencies.gson
+
     // Test
     testImplementation TestDependencies.jUnit
     androidTestImplementation TestDependencies.jUnitExtAndroid

@@ -16,10 +16,10 @@ class ProductViewModel(
 
     private val _product: MutableLiveData<List<Product>> = MutableLiveData()
 
-    val movies: LiveData<List<Product>>
+    val products: LiveData<List<Product>>
         get() = _product
 
-    fun fetchMovies() {
+    fun fetchProducts() {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
                 val postsList = getProductUseCase.getProduct()

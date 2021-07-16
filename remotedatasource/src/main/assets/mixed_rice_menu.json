@@ -1,0 +1,369 @@
+{
+  "status": 200,
+  "data": {
+    "after": "empty",
+    "before": "empty",
+    "dist": "OK",
+    "products": [
+      {
+        "id": "id_inexpensive_rice",
+        "name": "Arroz económico",
+        "description": "Pollo, jamón, verduras, raices.",
+        "type": "classic",
+        "image": "https://i.ibb.co/BrVTR1L/Economico.png",
+        "amounts": [
+          {
+            "price": 7000,
+            "weight": "300gr",
+            "servings": "personal"
+          },
+          {
+            "price": 18000,
+            "weight": "2000gr",
+            "servings": "3"
+          },
+          {
+            "price": 23000,
+            "weight": "3000gr",
+            "servings": "5"
+          },
+          {
+            "price": 27000,
+            "weight": "4000gr",
+            "servings": "7"
+          },
+          {
+            "price": 33000,
+            "weight": "6000gr",
+            "servings": "10"
+          },
+          {
+            "price": 37000,
+            "weight": "8000gr",
+            "servings": "14"
+          }
+        ]
+      },
+      {
+        "id": "id_chinese_rice",
+        "name": "Arroz chino",
+        "description": "Pollo, Camarón, Jamón, Cerdo, Raices Chinas.",
+        "type": "classic",
+        "image": "https://i.ibb.co/WFKSG9P/Chino.png",
+        "amounts": [
+          {
+            "price": 7000,
+            "weight": "300gr",
+            "servings": "personal"
+          },
+          {
+            "price": 21000,
+            "weight": "2000gr",
+            "servings": "3"
+          },
+          {
+            "price": 26000,
+            "weight": "3000gr",
+            "servings": "5"
+          },
+          {
+            "price": 30000,
+            "weight": "4000gr",
+            "servings": "7"
+          },
+          {
+            "price": 36000,
+            "weight": "6000gr",
+            "servings": "10"
+          },
+          {
+            "price": 40000,
+            "weight": "8000gr",
+            "servings": "14"
+          }
+        ]
+      },
+      {
+        "id": "id_valencian_rice",
+        "name": "Arroz a la valenciana",
+        "description": "Camarón, Jamón, Cerdo, Raices Chinas y Papas Fritas.",
+        "type": "classic",
+        "image": "https://i.ibb.co/GnhMySN/Valenciana.png",
+        "amounts": [
+          {
+            "price": 27000,
+            "weight": "2000gr",
+            "servings": "1/4 Pollo Frito"
+          },
+          {
+            "price": 33000,
+            "weight": "3000gr",
+            "servings": "1/2 Pollo Frito"
+          },
+          {
+            "price": 23000,
+            "weight": "4000gr",
+            "servings": "1 Pollo Frito"
+          }
+        ]
+      },
+      {
+        "id": "id_ranch_rice",
+        "name": "Arroz Ranchero",
+        "description": "Pollo, Chorizo, Cabanos, Mortadela, Cerveroni, Maíz, Raices Chinas.",
+        "type": "classic",
+        "image": "https://i.ibb.co/QHyh75V/Ranchero.png",
+        "amounts": [
+          {
+            "price": 7000,
+            "weight": "300gr",
+            "servings": "personal"
+          },
+          {
+            "price": 21000,
+            "weight": "2000gr",
+            "servings": "3"
+          },
+          {
+            "price": 26000,
+            "weight": "3000gr",
+            "servings": "5"
+          },
+          {
+            "price": 30000,
+            "weight": "4000gr",
+            "servings": "7"
+          },
+          {
+            "price": 36000,
+            "weight": "6000gr",
+            "servings": "10"
+          },
+          {
+            "price": 40000,
+            "weight": "8000gr",
+            "servings": "14"
+          }
+        ]
+      },
+      {
+        "id": "id_paisa_rice",
+        "name": "Arroz Paisa",
+        "description": "Albondigas, Chorizo, Chicharrón, Costilla de cerdo, Pollo, Frijol, Maduros Fritos.",
+        "type": "classic",
+        "image": "https://i.ibb.co/gycWcBr/Paisa.png",
+        "amounts": [
+          {
+            "price": 9000,
+            "weight": "300gr",
+            "servings": "personal"
+          },
+          {
+            "price": 23000,
+            "weight": "2000gr",
+            "servings": "3"
+          },
+          {
+            "price": 28000,
+            "weight": "3000gr",
+            "servings": "5"
+          },
+          {
+            "price": 33000,
+            "weight": "4000gr",
+            "servings": "7"
+          },
+          {
+            "price": 43000,
+            "weight": "6000gr",
+            "servings": "10"
+          },
+          {
+            "price": 50000,
+            "weight": "8000gr",
+            "servings": "14"
+          }
+        ]
+      },
+      {
+        "id": "id_three_delights_rice",
+        "name": "Arroz Tres Delicias",
+        "description": "Cerdo, Res, Pollo, Verduras.",
+        "type": "special",
+        "image": "https://i.ibb.co/92KTgcZ/Tres-delicias.png",
+        "amounts": [
+          {
+            "price": 8000,
+            "weight": "300gr",
+            "servings": "personal"
+          },
+          {
+            "price": 22000,
+            "weight": "2000gr",
+            "servings": "3"
+          },
+          {
+            "price": 27000,
+            "weight": "3000gr",
+            "servings": "5"
+          },
+          {
+            "price": 31000,
+            "weight": "4000gr",
+            "servings": "7"
+          },
+          {
+            "price": 37000,
+            "weight": "6000gr",
+            "servings": "10"
+          },
+          {
+            "price": 48000,
+            "weight": "8000gr",
+            "servings": "14"
+          }
+        ]
+      },
+      {
+        "id": "id_sea_and_land_rice",
+        "name": "Arroz Mar y Tierra",
+        "description": "Pollo, Res, Camarón, Verduras, Raices Chinas.",
+        "type": "special",
+        "image": "https://i.ibb.co/ckXGxP7/Mar-y-tierra.png",
+        "amounts": [
+          {
+            "price": 8000,
+            "weight": "300gr",
+            "servings": "personal"
+          },
+          {
+            "price": 22000,
+            "weight": "2000gr",
+            "servings": "3"
+          },
+          {
+            "price": 27000,
+            "weight": "3000gr",
+            "servings": "5"
+          },
+          {
+            "price": 31000,
+            "weight": "4000gr",
+            "servings": "7"
+          },
+          {
+            "price": 37000,
+            "weight": "6000gr",
+            "servings": "10"
+          },
+          {
+            "price": 48000,
+            "weight": "8000gr",
+            "servings": "14"
+          }
+        ]
+      },
+      {
+        "id": "id_sweet_pepper_rice",
+        "name": "Arroz Dulce Pimienta",
+        "description": "Pollo, Tocineta, Camarón, Chorizo, Res, Jamón, Huevo, Arveja, Raices Chinas.",
+        "type": "special",
+        "image": "https://i.ibb.co/bKRTkvv/Dulce-Pimienta.png",
+        "amounts": [
+          {
+            "price": 9000,
+            "weight": "300gr",
+            "servings": "personal"
+          },
+          {
+            "price": 23000,
+            "weight": "2000gr",
+            "servings": "3"
+          },
+          {
+            "price": 28000,
+            "weight": "3000gr",
+            "servings": "5"
+          },
+          {
+            "price": 33000,
+            "weight": "4000gr",
+            "servings": "7"
+          },
+          {
+            "price": 43000,
+            "weight": "6000gr",
+            "servings": "10"
+          },
+          {
+            "price": 50000,
+            "weight": "8000gr",
+            "servings": "14"
+          }
+        ]
+      },
+      {
+        "id": "id_smoked_rib",
+        "name": "Costilla Ahumada",
+        "description": "Acompañada de 100gr de Papas Fritas",
+        "type": "extra",
+        "image": "https://i.ibb.co/Bgp1hY0/Costilla-Ahumada.png",
+        "amounts": [
+          {
+            "price": 12000,
+            "weight": "250gr",
+            "servings": "personal"
+          },
+          {
+            "price": 18000,
+            "weight": "500gr",
+            "servings": "2"
+          }
+        ]
+      },
+      {
+        "id": "id_bittersweet_chicken",
+        "name": "Pollo Agridulce",
+        "description": "Acompañada de 100gr de Papas Fritas",
+        "type": "extra",
+        "image": "https://i.ibb.co/gP1xFT2/Pollo-Agridulce.png",
+        "amounts": [
+          {
+            "price": 16000,
+            "weight": "300gr",
+            "servings": "personal"
+          },
+          {
+            "price": 22000,
+            "weight": "500gr",
+            "servings": "2"
+          },
+          {
+            "price": 26000,
+            "weight": "700gr",
+            "servings": "3"
+          }
+        ]
+      },
+      {
+        "id": "id_chips",
+        "name": "Papas Fritas",
+        "description": "Acompañamiento",
+        "type": "extra",
+        "image": "https://i.ibb.co/B41kV8R/Papas-fritas.png",
+        "amounts": [
+          {
+            "price": 4000,
+            "weight": "200gr",
+            "servings": "personal"
+          },
+          {
+            "price": 6000,
+            "weight": "400gr",
+            "servings": "2"
+          }
+        ]
+      }
+    ]
+  }
+}

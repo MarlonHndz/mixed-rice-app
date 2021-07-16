@@ -2,7 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/home_nav_graph">
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/home_list_fragment">
 
     <fragment
         android:id="@+id/home_list_fragment"
@@ -12,15 +13,19 @@
 
         <action
             android:id="@+id/action_home_list_to_home_details"
-            app:destination="@+id/home_details_fragment"/>
+            app:destination="@+id/home_details_fragment" />
 
     </fragment>
 
     <fragment
         android:id="@+id/home_details_fragment"
-        android:name="com.marlonhndz.presentation.ui.products.ProductDetailsFragment"
+        android:name="com.marlonhndz.presentation.ui.productDetails.ProductDetailsFragment"
         android:label="homeDetailsFragment"
         tools:layout="@layout/product_details_fragment">
+
+        <argument
+            android:name="myProduct"
+            app:argType="com.marlonhndz.domain.models.Product" />
     </fragment>
 
 </navigation>

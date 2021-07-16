@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_border">#F5F5F5</color>
+    <color name="drark_gray_border">#B3B3B3</color>
+
+
+    <color name="amount_item_red">#A11717</color>
+    <color name="amount_item_yellow">#E5D35D</color>
+</resources>
