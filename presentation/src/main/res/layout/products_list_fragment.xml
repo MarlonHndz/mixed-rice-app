@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/refreshProducts"
+        android:id="@+id/refresh_products"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".presentation.MovieActivity">
+            android:layout_height="match_parent">
 
             <include
                 android:id="@+id/home_toolbar"
@@ -24,7 +23,7 @@
 
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvProductsList"
+                android:id="@+id/rv_products_list"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_margin="1dp"

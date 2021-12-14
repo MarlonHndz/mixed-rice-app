@@ -3,7 +3,6 @@ package com.marlonhndz.presentation.ui
 import androidx.navigation.fragment.NavHostFragment
 import com.marlonhndz.presentation.R
 import com.marlonhndz.presentation.databinding.ActivityHomeBinding
-import com.marlonhndz.presentation.ui.BaseNavActivity
 import kotlinx.android.synthetic.main.activity_home.home_nav_host_fragment
 
 class HomeActivity : BaseNavActivity() {

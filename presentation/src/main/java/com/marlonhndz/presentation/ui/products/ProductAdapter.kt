@@ -16,7 +16,7 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
     inner class ViewHolder(private val binding: ProductItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(product: Product) {
-            with(binding){
+            with(binding) {
                 txtProductName.text = product.name
                 txtProductType.text = product.type.value
                 txtProductDescription.text = product.description
@@ -28,7 +28,7 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
                     .into(imvProduct)
 
                 // SetUp Listener
-                productItem.setOnClickListener {
+                rootProductItem.setOnClickListener {
                     listener?.itemClicked(product)
                 }
             }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/product_item"
+        android:id="@+id/root_product_item"
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -21,7 +21,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imvProduct"
+                android:id="@+id/imv_product"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:background="@drawable/product_placeholder"
@@ -47,7 +47,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/txtProductName"
+                    android:id="@+id/txt_product_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="145dp"
@@ -63,20 +63,20 @@
                     tools:text="Arroz Mar y Tierra" />
 
                 <TextView
-                    android:id="@+id/txtProductType"
+                    android:id="@+id/txt_product_type"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:maxLines="1"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="@id/txtProductName"
-                    app:layout_constraintStart_toStartOf="@+id/txtProductName"
-                    app:layout_constraintTop_toBottomOf="@id/txtProductName"
+                    app:layout_constraintEnd_toEndOf="@id/txt_product_name"
+                    app:layout_constraintStart_toStartOf="@+id/txt_product_name"
+                    app:layout_constraintTop_toBottomOf="@id/txt_product_name"
                     tools:text="Clasico" />
 
                 <TextView
-                    android:id="@+id/txtProductDescription"
+                    android:id="@+id/txt_product_description"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
@@ -84,9 +84,9 @@
                     android:maxLines="1"
                     android:ellipsize="end"
                     android:textSize="15sp"
-                    app:layout_constraintEnd_toEndOf="@id/txtProductName"
-                    app:layout_constraintStart_toStartOf="@+id/txtProductName"
-                    app:layout_constraintTop_toBottomOf="@id/txtProductType"
+                    app:layout_constraintEnd_toEndOf="@id/txt_product_name"
+                    app:layout_constraintStart_toStartOf="@+id/txt_product_name"
+                    app:layout_constraintTop_toBottomOf="@id/txt_product_type"
                     tools:text="Ingredientes" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

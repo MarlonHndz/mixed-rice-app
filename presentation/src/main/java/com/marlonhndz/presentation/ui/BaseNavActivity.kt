@@ -14,5 +14,4 @@ abstract class BaseNavActivity : AppCompatActivity() {
     }
 
     abstract fun setActivityView()
-
 }

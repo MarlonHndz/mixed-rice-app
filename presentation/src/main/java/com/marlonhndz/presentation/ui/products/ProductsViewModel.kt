@@ -5,25 +5,25 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.marlonhndz.domain.models.Product
-import com.marlonhndz.domain.useCases.GetProductUseCase
+import com.marlonhndz.domain.useCases.ProductsUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class ProductViewModel(
-    private val getProductUseCase: GetProductUseCase
+class ProductsViewModel(
+    private val productsUseCase: ProductsUseCase
 ) : ViewModel() {
 
-    private val _product: MutableLiveData<List<Product>> = MutableLiveData()
+    private val _productsList: MutableLiveData<List<Product>> = MutableLiveData()
 
-    val products: LiveData<List<Product>>
-        get() = _product
+    val productsList: LiveData<List<Product>>
+        get() = _productsList
 
     fun fetchProducts() {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                val postsList = getProductUseCase.getProduct()
-                _product.postValue(postsList)
+                val productsList = productsUseCase.getProducts()
+                _productsList.postValue(productsList)
             }
         }
     }

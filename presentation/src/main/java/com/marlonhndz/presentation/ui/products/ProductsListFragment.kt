@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.marlonhndz.domain.models.Product
+import com.marlonhndz.presentation.R
 import com.marlonhndz.presentation.databinding.ProductsListFragmentBinding
+import kotlinx.android.synthetic.main.home_toolbar.view.*
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -16,7 +18,7 @@ class ProductsListFragment : Fragment() {
 
     private lateinit var binding: ProductsListFragmentBinding
 
-    private val productViewModel: ProductViewModel by viewModel()
+    private val productsViewModel: ProductsViewModel by viewModel()
     private val productAdapter: ProductAdapter by inject()
 
     override fun onCreateView(
@@ -34,21 +36,36 @@ class ProductsListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpObservers()
+        setUpViews()
         setUpListenersFromView()
         setUpProductsRecyclerView()
         loadData()
     }
 
     private fun setUpObservers() {
-        productViewModel.products.observe(viewLifecycleOwner) { products ->
+        productsViewModel.productsList.observe(viewLifecycleOwner) { products ->
             binding.refreshProducts.isRefreshing = false
             productAdapter.replaceItems(products)
         }
     }
 
+    private fun setUpViews() {
+        with(binding.homeToolbar.main_toolbar) {
+            inflateMenu(R.menu.home_menu)
+            setOnMenuItemClickListener {
+                when (it.itemId) {
+                    R.id.menu_cart_fragment -> findNavController().navigate(
+                        ProductsListFragmentDirections.actionHomeListToHomeShoppingCart()
+                    )
+                }
+                true
+            }
+        }
+    }
+
     private fun setUpListenersFromView() {
         binding.refreshProducts.setOnRefreshListener {
-            productViewModel.fetchProducts()
+            productsViewModel.fetchProducts()
         }
     }
 
@@ -68,6 +85,6 @@ class ProductsListFragment : Fragment() {
     }
 
     private fun loadData() {
-        productViewModel.fetchProducts()
+        productsViewModel.fetchProducts()
     }
 }

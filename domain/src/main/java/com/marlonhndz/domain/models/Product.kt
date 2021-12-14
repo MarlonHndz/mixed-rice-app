@@ -8,10 +8,12 @@ data class Product(
     val description: String,
     val imageURL: String,
     val type: ProductType,
+    var isFavorite: Boolean,
     val amounts: List<Amount>
 ) : Serializable
 
 data class Amount(
+    val id: String,
     val price: Int,
     val weight: String,
     val servings: String
@@ -23,11 +25,11 @@ enum class ProductType(val value: String) {
     Special("special");
 
     companion object {
-         fun fromValue(value: String): ProductType = when (value) {
+        fun fromValue(value: String): ProductType = when (value) {
             "classic" -> Classic
-            "extra"   -> Extra
+            "extra" -> Extra
             "special" -> Special
-            else      -> throw IllegalArgumentException()
+            else -> throw IllegalArgumentException()
         }
     }
 }

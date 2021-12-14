@@ -15,6 +15,10 @@
             android:id="@+id/action_home_list_to_home_details"
             app:destination="@+id/home_details_fragment" />
 
+        <action
+            android:id="@+id/action_home_list_to_home_shopping_cart"
+            app:destination="@+id/home_shopping_cart_fragment" />
+
     </fragment>
 
     <fragment
@@ -26,6 +30,14 @@
         <argument
             android:name="myProduct"
             app:argType="com.marlonhndz.domain.models.Product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/home_shopping_cart_fragment"
+        android:name="com.marlonhndz.presentation.ui.shoppingcart.ShoppingCartFragment"
+        android:label="homeShoppingCartFragment"
+        tools:layout="@layout/shopping_cart_fragment">
+
     </fragment>
 
 </navigation>

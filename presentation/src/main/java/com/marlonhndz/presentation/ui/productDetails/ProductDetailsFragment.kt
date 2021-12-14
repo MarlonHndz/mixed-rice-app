@@ -13,12 +13,14 @@ import com.marlonhndz.presentation.R
 import com.marlonhndz.presentation.databinding.ProductDetailsFragmentBinding
 import com.squareup.picasso.Picasso
 import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ProductDetailsFragment : Fragment() {
 
     private lateinit var binding: ProductDetailsFragmentBinding
     private val args: ProductDetailsFragmentArgs by navArgs()
 
+    private val productDetailViewModel: ProductDetailViewModel by viewModel()
     private val amountAdapter: AmountAdapter by inject()
 
     override fun onCreateView(
@@ -51,11 +53,15 @@ class ProductDetailsFragment : Fragment() {
             .into(binding.imvProductBanner)
 
         loadAmounts(product.amounts)
+
+        binding.btnAddToCart.setOnClickListener {
+            productDetailViewModel.addProductToOrder(product)
+        }
     }
 
     private fun setUpAmountsRecyclerView() {
         val linearLayoutManager = LinearLayoutManager(this.context)
-        binding.amountList.rvAmountList.apply {
+        binding.rvAmountList.apply {
             layoutManager = linearLayoutManager
             adapter = amountAdapter
         }
@@ -70,7 +76,7 @@ class ProductDetailsFragment : Fragment() {
         })
     }
 
-    private fun loadAmounts(amounts : List<Amount>) {
+    private fun loadAmounts(amounts: List<Amount>) {
         amountAdapter.replaceItems(amounts)
     }
 }

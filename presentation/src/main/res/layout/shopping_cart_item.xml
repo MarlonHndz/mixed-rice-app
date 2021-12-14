@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/root_shopping_cart_item"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:focusable="true"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_product_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:elevation="0dp"
+                android:translationZ="5dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imv_product"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/product_placeholder"
+                    android:scaleType="fitXY" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txt_product_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:maxLines="1"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/card_product_image"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Arroz Mar y Tierra" />
+
+            <TextView
+                android:id="@+id/txt_product_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:maxLines="1"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@id/btn_minus"
+                app:layout_constraintStart_toStartOf="@+id/txt_product_name"
+                app:layout_constraintTop_toBottomOf="@id/txt_product_name"
+                tools:text="Clasico" />
+
+            <TextView
+                android:id="@+id/txtProductDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/txt_product_type"
+                app:layout_constraintStart_toStartOf="@+id/txt_product_name"
+                app:layout_constraintTop_toBottomOf="@id/txt_product_type"
+                tools:text="Ingredientes" />
+
+            <ImageButton
+                android:id="@+id/btn_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:background="@android:color/white"
+                android:minWidth="30dp"
+                android:minHeight="30dp"
+                android:src="@drawable/ic_cart_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_quantity_of_products"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="7dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_plus"
+                tools:text="1" />
+
+            <ImageButton
+                android:id="@+id/btn_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:background="@android:color/white"
+                android:minWidth="30dp"
+                android:minHeight="30dp"
+                android:src="@drawable/ic_cart_remove"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_quantity_of_products" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

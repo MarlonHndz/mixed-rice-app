@@ -56,5 +56,4 @@ class AmountAdapter : RecyclerView.Adapter<AmountAdapter.ViewHolder>() {
         holder.bind(items[position])
 
     override fun getItemCount() = items.size
-
 }

@@ -13,31 +13,37 @@
         "image": "https://i.ibb.co/BrVTR1L/Economico.png",
         "amounts": [
           {
+            "id": "id_inexpensive_amount_1",
             "price": 7000,
             "weight": "300gr",
             "servings": "personal"
           },
           {
+            "id": "id_inexpensive_amount_2",
             "price": 18000,
             "weight": "2000gr",
             "servings": "3"
           },
           {
+            "id": "id_inexpensive_amount_3",
             "price": 23000,
             "weight": "3000gr",
             "servings": "5"
           },
           {
+            "id": "id_inexpensive_amount_4",
             "price": 27000,
             "weight": "4000gr",
             "servings": "7"
           },
           {
+            "id": "id_inexpensive_amount_5",
             "price": 33000,
             "weight": "6000gr",
             "servings": "10"
           },
           {
+            "id": "id_inexpensive_amount_6",
             "price": 37000,
             "weight": "8000gr",
             "servings": "14"
@@ -52,31 +58,37 @@
         "image": "https://i.ibb.co/WFKSG9P/Chino.png",
         "amounts": [
           {
+            "id": "id_chinese_amount_1",
             "price": 7000,
             "weight": "300gr",
             "servings": "personal"
           },
           {
+            "id": "id_chinese_amount_2",
             "price": 21000,
             "weight": "2000gr",
             "servings": "3"
           },
           {
+            "id": "id_chinese_amount_3",
             "price": 26000,
             "weight": "3000gr",
             "servings": "5"
           },
           {
+            "id": "id_chinese_amount_4",
             "price": 30000,
             "weight": "4000gr",
             "servings": "7"
           },
           {
+            "id": "id_chinese_amount_5",
             "price": 36000,
             "weight": "6000gr",
             "servings": "10"
           },
           {
+            "id": "id_chinese_amount_6",
             "price": 40000,
             "weight": "8000gr",
             "servings": "14"
@@ -91,16 +103,19 @@
         "image": "https://i.ibb.co/GnhMySN/Valenciana.png",
         "amounts": [
           {
+            "id": "id_valencian_amount_1",
             "price": 27000,
             "weight": "2000gr",
             "servings": "1/4 Pollo Frito"
           },
           {
+            "id": "id_valencian_amount_2",
             "price": 33000,
             "weight": "3000gr",
             "servings": "1/2 Pollo Frito"
           },
           {
+            "id": "id_valencian_amount_3",
             "price": 23000,
             "weight": "4000gr",
             "servings": "1 Pollo Frito"
@@ -115,31 +130,37 @@
         "image": "https://i.ibb.co/QHyh75V/Ranchero.png",
         "amounts": [
           {
+            "id": "id_ranch_amount_1",
             "price": 7000,
             "weight": "300gr",
             "servings": "personal"
           },
           {
+            "id": "id_ranch_amount_2",
             "price": 21000,
             "weight": "2000gr",
             "servings": "3"
           },
           {
+            "id": "id_ranch_amount_3",
             "price": 26000,
             "weight": "3000gr",
             "servings": "5"
           },
           {
+            "id": "id_ranch_amount_4",
             "price": 30000,
             "weight": "4000gr",
             "servings": "7"
           },
           {
+            "id": "id_ranch_amount_5",
             "price": 36000,
             "weight": "6000gr",
             "servings": "10"
           },
           {
+            "id": "id_ranch_amount_6",
             "price": 40000,
             "weight": "8000gr",
             "servings": "14"
@@ -154,31 +175,37 @@
         "image": "https://i.ibb.co/gycWcBr/Paisa.png",
         "amounts": [
           {
+            "id": "id_paisa_amount_1",
             "price": 9000,
             "weight": "300gr",
             "servings": "personal"
           },
           {
+            "id": "id_paisa_amount_2",
             "price": 23000,
             "weight": "2000gr",
             "servings": "3"
           },
           {
+            "id": "id_paisa_amount_3",
             "price": 28000,
             "weight": "3000gr",
             "servings": "5"
           },
           {
+            "id": "id_paisa_amount_4",
             "price": 33000,
             "weight": "4000gr",
             "servings": "7"
           },
           {
+            "id": "id_paisa_amount_5",
             "price": 43000,
             "weight": "6000gr",
             "servings": "10"
           },
           {
+            "id": "id_paisa_amount_6",
             "price": 50000,
             "weight": "8000gr",
             "servings": "14"
@@ -193,31 +220,37 @@
         "image": "https://i.ibb.co/92KTgcZ/Tres-delicias.png",
         "amounts": [
           {
+            "id": "id_three_delights_amount_1",
             "price": 8000,
             "weight": "300gr",
             "servings": "personal"
           },
           {
+            "id": "id_three_delights_amount_2",
             "price": 22000,
             "weight": "2000gr",
             "servings": "3"
           },
           {
+            "id": "id_three_delights_amount_3",
             "price": 27000,
             "weight": "3000gr",
             "servings": "5"
           },
           {
+            "id": "id_three_delights_amount_4",
             "price": 31000,
             "weight": "4000gr",
             "servings": "7"
           },
           {
+            "id": "id_three_delights_amount_5",
             "price": 37000,
             "weight": "6000gr",
             "servings": "10"
           },
           {
+            "id": "id_three_delights_amount_6",
             "price": 48000,
             "weight": "8000gr",
             "servings": "14"
@@ -232,31 +265,37 @@
         "image": "https://i.ibb.co/ckXGxP7/Mar-y-tierra.png",
         "amounts": [
           {
+            "id": "id_sea_and_land_amount_1",
             "price": 8000,
             "weight": "300gr",
             "servings": "personal"
           },
           {
+            "id": "id_sea_and_land_amount_2",
             "price": 22000,
             "weight": "2000gr",
             "servings": "3"
           },
           {
+            "id": "id_sea_and_land_amount_3",
             "price": 27000,
             "weight": "3000gr",
             "servings": "5"
           },
           {
+            "id": "id_sea_and_land_amount_4",
             "price": 31000,
             "weight": "4000gr",
             "servings": "7"
           },
           {
+            "id": "id_sea_and_land_amount_5",
             "price": 37000,
             "weight": "6000gr",
             "servings": "10"
           },
           {
+            "id": "id_sea_and_land_amount_6",
             "price": 48000,
             "weight": "8000gr",
             "servings": "14"
@@ -271,31 +310,37 @@
         "image": "https://i.ibb.co/bKRTkvv/Dulce-Pimienta.png",
         "amounts": [
           {
+            "id": "id_sweet_pepper_amount_1",
             "price": 9000,
             "weight": "300gr",
             "servings": "personal"
           },
           {
+            "id": "id_sweet_pepper_amount_2",
             "price": 23000,
             "weight": "2000gr",
             "servings": "3"
           },
           {
+            "id": "id_sweet_pepper_amount_3",
             "price": 28000,
             "weight": "3000gr",
             "servings": "5"
           },
           {
+            "id": "id_sweet_pepper_amount_4",
             "price": 33000,
             "weight": "4000gr",
             "servings": "7"
           },
           {
+            "id": "id_sweet_pepper_amount_5",
             "price": 43000,
             "weight": "6000gr",
             "servings": "10"
           },
           {
+            "id": "id_sweet_pepper_amount_6",
             "price": 50000,
             "weight": "8000gr",
             "servings": "14"
@@ -310,11 +355,13 @@
         "image": "https://i.ibb.co/Bgp1hY0/Costilla-Ahumada.png",
         "amounts": [
           {
+            "id": "id_smoked_amount_1",
             "price": 12000,
             "weight": "250gr",
             "servings": "personal"
           },
           {
+            "id": "id_smoked_amount_2",
             "price": 18000,
             "weight": "500gr",
             "servings": "2"
@@ -329,16 +376,19 @@
         "image": "https://i.ibb.co/gP1xFT2/Pollo-Agridulce.png",
         "amounts": [
           {
+            "id": "id_bittersweet_amount_1",
             "price": 16000,
             "weight": "300gr",
             "servings": "personal"
           },
           {
+            "id": "id_bittersweet_amount_2",
             "price": 22000,
             "weight": "500gr",
             "servings": "2"
           },
           {
+            "id": "id_bittersweet_amount_3",
             "price": 26000,
             "weight": "700gr",
             "servings": "3"
@@ -353,11 +403,13 @@
         "image": "https://i.ibb.co/B41kV8R/Papas-fritas.png",
         "amounts": [
           {
+            "id": "id_chips_amount_1",
             "price": 4000,
             "weight": "200gr",
             "servings": "personal"
           },
           {
+            "id": "id_chips_amount_2",
             "price": 6000,
             "weight": "400gr",
             "servings": "2"

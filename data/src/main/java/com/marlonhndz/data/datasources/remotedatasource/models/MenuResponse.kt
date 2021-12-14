@@ -1,8 +1,8 @@
-package com.marlonhndz.remotedatasource.models
+package com.marlonhndz.data.datasources.remotedatasource.models
 
 import com.marlonhndz.data.commons.StringUtils.EMPTY_STRING
 
-data class ProductResponse(
+data class MenuResponse(
     val status: Int,
     val data: Data
 ) {
@@ -21,6 +21,7 @@ data class ProductResponse(
             val amounts: List<Amount>
         ) {
             data class Amount(
+                var id: String = EMPTY_STRING,
                 var price: Int = 0,
                 var weight: String = EMPTY_STRING,
                 var servings: String = EMPTY_STRING

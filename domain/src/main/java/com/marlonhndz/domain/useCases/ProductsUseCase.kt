@@ -3,10 +3,10 @@ package com.marlonhndz.domain.useCases
 import com.marlonhndz.domain.models.Product
 import com.marlonhndz.domain.repositories.ProductRepository
 
-class GetProductUseCase (
+class ProductsUseCase(
     private val productRepository: ProductRepository
 ) {
-    suspend fun getProduct(): List<Product> {
-        return productRepository.getProduct()
+    suspend fun getProducts(): List<Product> {
+        return productRepository.getProductsList()
     }
 }
