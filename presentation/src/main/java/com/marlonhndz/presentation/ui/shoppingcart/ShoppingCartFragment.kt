@@ -71,6 +71,7 @@ class ShoppingCartFragment : Fragment() {
             layoutManager = linearLayoutManager
             adapter = shoppingCartAdapter
         }
+
         shoppingCartAdapter.addListener(object : ShoppingCartAdapter.Listener {
             override fun itemClicked(order: Order) {
                 // TODO
