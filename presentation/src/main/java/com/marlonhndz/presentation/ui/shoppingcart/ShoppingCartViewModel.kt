@@ -27,4 +27,12 @@ class ShoppingCartViewModel(
             }
         }
     }
+
+    fun clearOrder() {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                orderUseCase.clearOrder()
+            }
+        }
+    }
 }

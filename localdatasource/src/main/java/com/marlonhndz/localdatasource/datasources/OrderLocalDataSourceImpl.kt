@@ -25,4 +25,8 @@ class OrderLocalDataSourceImpl(
             orderLocalToOrderMapper(orderedProduct, orderedAmount)
         }
     }
+
+    override suspend fun clearOrder() {
+        appDatabase.orderDao().clearTable()
+    }
 }

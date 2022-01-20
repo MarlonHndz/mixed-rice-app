@@ -6,4 +6,5 @@ import com.marlonhndz.domain.models.Product
 interface OrderLocalDataSource {
     suspend fun addProductToOrder(product: Product)
     suspend fun getOrders(): List<Order>
+    suspend fun clearOrder()
 }

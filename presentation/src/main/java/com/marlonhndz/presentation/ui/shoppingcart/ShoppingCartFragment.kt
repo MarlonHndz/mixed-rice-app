@@ -58,6 +58,11 @@ class ShoppingCartFragment : Fragment() {
                 }
             }
         }
+
+        binding.btnEmptyCart.setOnClickListener {
+            shoppingCartAdapter.removeAllItems()
+            shoppingCartViewModel.clearOrder()
+        }
     }
 
     private fun setUpProductsRecyclerView() {

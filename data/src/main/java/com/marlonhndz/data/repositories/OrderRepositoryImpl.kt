@@ -16,4 +16,8 @@ class OrderRepositoryImpl(
     override suspend fun getOrders(): List<Order> {
         return orderLocalDataSource.getOrders()
     }
+
+    override suspend fun clearOrder() {
+        orderLocalDataSource.clearOrder()
+    }
 }

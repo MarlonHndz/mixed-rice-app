@@ -14,4 +14,8 @@ class OrderUseCase(
     suspend fun getOrders(): List<Order> {
         return orderRepository.getOrders()
     }
+
+    suspend fun clearOrder() {
+        return orderRepository.clearOrder()
+    }
 }

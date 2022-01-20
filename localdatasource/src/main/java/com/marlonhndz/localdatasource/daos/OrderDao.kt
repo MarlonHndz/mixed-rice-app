@@ -23,6 +23,9 @@ interface OrderDao {
     @Delete
     fun delete(order: OrderLocal)
 
+    @Query("DELETE FROM `Order`")
+    fun clearTable()
+
     @Query("SELECT * FROM `Order`")
     fun getAll(): List<OrderLocal>
 }
