@@ -9,7 +9,7 @@ import com.marlonhndz.domain.models.ProductType
 
 class OrderLocalToOrderMapper {
 
-    operator fun invoke(productLocal: ProductLocal, amountLocal: AmountLocal) =
+    operator fun invoke(productLocal: ProductLocal, amountLocal: AmountLocal, productQuantity: Int) =
         Order(
             product = Product(
                 id = productLocal.productId,
@@ -26,6 +26,6 @@ class OrderLocalToOrderMapper {
                 weight = amountLocal.weight,
                 servings = amountLocal.servings
             ),
-            quantity = 1
+            quantity = productQuantity
         )
 }

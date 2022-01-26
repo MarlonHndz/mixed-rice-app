@@ -55,7 +55,9 @@ class ProductDetailsFragment : Fragment() {
         loadAmounts(product.amounts)
 
         binding.btnAddToCart.setOnClickListener {
-            productDetailViewModel.addProductToOrder(product)
+            val quantity = binding.addOrRemoveUnitView.getQuantity()
+            productDetailViewModel.addProductToOrder(product, quantity)
+            Toast.makeText(this.context, "Producto agregado x $quantity", Toast.LENGTH_SHORT).show()
         }
     }
 

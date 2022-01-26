@@ -13,8 +13,8 @@ class OrderLocalDataSourceImpl(
     private val orderLocalToOrderMapper: OrderLocalToOrderMapper
 ) : OrderLocalDataSource {
 
-    override suspend fun addProductToOrder(product: Product) {
-        appDatabase.orderDao().insert(productToOrderLocalMapper(product))
+    override suspend fun addProductToOrder(product: Product, productQuantity: Int) {
+        appDatabase.orderDao().insert(productToOrderLocalMapper(product, productQuantity))
     }
 
     override suspend fun getOrders(): List<Order> {
@@ -22,7 +22,7 @@ class OrderLocalDataSourceImpl(
         return orders.map {
             val orderedProduct = appDatabase.productDao().getProductByID(it.productId)
             val orderedAmount = appDatabase.amountDao().getAmountByID(it.amountId)
-            orderLocalToOrderMapper(orderedProduct, orderedAmount)
+            orderLocalToOrderMapper(orderedProduct, orderedAmount, it.productQuantity)
         }
     }
 

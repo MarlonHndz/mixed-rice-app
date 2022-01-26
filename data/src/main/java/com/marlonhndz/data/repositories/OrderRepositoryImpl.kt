@@ -9,8 +9,8 @@ class OrderRepositoryImpl(
     private val orderLocalDataSource: OrderLocalDataSource
 ) : OrderRepository {
 
-    override suspend fun addProductToOrder(product: Product) {
-        orderLocalDataSource.addProductToOrder(product)
+    override suspend fun addProductToOrder(product: Product, productQuantity: Int) {
+        orderLocalDataSource.addProductToOrder(product, productQuantity)
     }
 
     override suspend fun getOrders(): List<Order> {

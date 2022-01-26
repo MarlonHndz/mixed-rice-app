@@ -90,7 +90,7 @@ class ShoppingCartFragment : Fragment() {
                 "y me gustaría solicitar los siguientes productos: \n" +
                 "${
                 orderList.map {
-                    "\n" + it.product.name
+                    "\n" + it.product.name + " x " + it.quantity
                 }
                 }"
 

@@ -12,10 +12,10 @@ class ProductDetailViewModel(
     private val orderUseCase: OrderUseCase
 ) : ViewModel() {
 
-    fun addProductToOrder(product: Product) {
+    fun addProductToOrder(product: Product, productQuantity: Int) {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                orderUseCase.addProductToOrder(product)
+                orderUseCase.addProductToOrder(product, productQuantity)
             }
         }
     }

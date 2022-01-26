@@ -7,8 +7,8 @@ import com.marlonhndz.domain.repositories.OrderRepository
 class OrderUseCase(
     private val orderRepository: OrderRepository
 ) {
-    suspend fun addProductToOrder(product: Product) {
-        orderRepository.addProductToOrder(product)
+    suspend fun addProductToOrder(product: Product, productQuantity: Int) {
+        orderRepository.addProductToOrder(product, productQuantity)
     }
 
     suspend fun getOrders(): List<Order> {

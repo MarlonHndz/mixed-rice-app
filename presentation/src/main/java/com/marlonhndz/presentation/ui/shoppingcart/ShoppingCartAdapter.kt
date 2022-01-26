@@ -20,6 +20,7 @@ class ShoppingCartAdapter : RecyclerView.Adapter<ShoppingCartAdapter.ViewHolder>
                 txtProductName.text = order.product.name
                 txtProductType.text = order.product.type.value
                 txtProductDescription.text = order.product.description
+                addOrRemoveUnitView.setQuantity(order.quantity)
 
                 // Image
                 Picasso.get()

@@ -5,10 +5,10 @@ import com.marlonhndz.domain.models.Product
 
 class ProductToOrderLocalMapper {
 
-    operator fun invoke(product: Product) =
+    operator fun invoke(product: Product, productQuantity: Int) =
         OrderLocal(
             productId = product.id,
-            productQuantity = 1,
+            productQuantity = productQuantity,
             amountId = product.amounts[0].id
         )
 }
