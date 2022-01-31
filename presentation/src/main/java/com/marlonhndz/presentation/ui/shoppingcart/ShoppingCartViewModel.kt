@@ -28,10 +28,10 @@ class ShoppingCartViewModel(
         }
     }
 
-    fun clearOrder() {
+    fun clearOrderList() {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                orderUseCase.clearOrder()
+                orderUseCase.clearOrderList()
             }
         }
     }
@@ -40,6 +40,14 @@ class ShoppingCartViewModel(
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
                 orderUseCase.updateOrder(newOrder)
+            }
+        }
+    }
+
+    fun deleteOrderFromList(order: Order) {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                orderUseCase.deleteOrderFromList(order)
             }
         }
     }

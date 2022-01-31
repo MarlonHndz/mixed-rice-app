@@ -89,11 +89,12 @@
 
             <com.marlonhndz.presentation.ui.customViews.AddOrRemoveUnitView
                 android:id="@+id/add_or_remove_unit_view"
-                android:layout_width="100dp"
-                android:layout_height="35dp"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txt_product_type" />
+                app:layout_constraintStart_toEndOf="@+id/txt_product_type"
+                app:text_size="17" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

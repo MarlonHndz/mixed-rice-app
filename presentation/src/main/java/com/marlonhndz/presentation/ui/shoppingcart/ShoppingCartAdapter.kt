@@ -23,6 +23,12 @@ class ShoppingCartAdapter : RecyclerView.Adapter<ShoppingCartAdapter.ViewHolder>
                 txtProductType.text = order.product.type.value
                 txtProductDescription.text = order.product.description
                 addOrRemoveUnitView.setQuantity(order.quantity)
+                when (order.quantity) {
+                    1 -> addOrRemoveUnitView.setDeleteBehaviorToButtonMinus() {
+                        listener?.deleteOrderFromList(order)
+                    }
+                    else -> addOrRemoveUnitView.setDecreaseBehaviorToButtonMinus()
+                }
 
                 // Image
                 Picasso.get()
@@ -30,7 +36,7 @@ class ShoppingCartAdapter : RecyclerView.Adapter<ShoppingCartAdapter.ViewHolder>
                     .placeholder(R.drawable.product_placeholder)
                     .into(imvProduct)
 
-                // SetUp Listener
+                // Setup Listeners
                 rootShoppingCartItem.setOnClickListener {
                     listener?.itemClicked(order)
                 }
@@ -39,8 +45,16 @@ class ShoppingCartAdapter : RecyclerView.Adapter<ShoppingCartAdapter.ViewHolder>
                     override fun afterTextChanged(s: Editable?) {}
                     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
                     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                        order.quantity = s.toString().toInt()
+                        val newQuantity = s.toString().toInt()
+                        order.quantity = newQuantity
                         listener?.onQuantityChanged(order)
+
+                        when (newQuantity) {
+                            1 -> addOrRemoveUnitView.setDeleteBehaviorToButtonMinus() {
+                                listener?.deleteOrderFromList(order)
+                            }
+                            else -> addOrRemoveUnitView.setDecreaseBehaviorToButtonMinus()
+                        }
                     }
                 })
             }
@@ -50,6 +64,7 @@ class ShoppingCartAdapter : RecyclerView.Adapter<ShoppingCartAdapter.ViewHolder>
     interface Listener {
         fun itemClicked(order: Order)
         fun onQuantityChanged(newOrder: Order)
+        fun deleteOrderFromList(order: Order)
     }
 
     fun addListener(listener: Listener) {

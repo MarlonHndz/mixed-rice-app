@@ -38,9 +38,7 @@ class AddOrRemoveUnitView @JvmOverloads constructor(
             }
 
             btnMinus.setOnClickListener {
-                quantity--
-                if (quantity < 1) quantity = 1
-                tvQuantityOfProducts.text = quantity.toString()
+                decreaseBehavior()
             }
         }
     }
@@ -53,6 +51,12 @@ class AddOrRemoveUnitView @JvmOverloads constructor(
         binding.tvQuantityOfProducts.textSize = quantityTextSize
     }
 
+    private fun decreaseBehavior() {
+        quantity--
+        if (quantity < 1) quantity = 1
+        binding.tvQuantityOfProducts.text = quantity.toString()
+    }
+
     fun getQuantity() = quantity
 
     fun setQuantity(productQuantity: Int) {
@@ -62,5 +66,15 @@ class AddOrRemoveUnitView @JvmOverloads constructor(
 
     fun setOnTextChangedListener(textWatcher: TextWatcher) {
         binding.tvQuantityOfProducts.addTextChangedListener(textWatcher)
+    }
+
+    fun setDeleteBehaviorToButtonMinus(listener: OnClickListener) {
+        binding.btnMinus.setImageResource(R.drawable.ic_cart_delete)
+        binding.btnMinus.setOnClickListener(listener)
+    }
+
+    fun setDecreaseBehaviorToButtonMinus() {
+        binding.btnMinus.setImageResource(R.drawable.ic_cart_remove)
+        binding.btnMinus.setOnClickListener { decreaseBehavior() }
     }
 }

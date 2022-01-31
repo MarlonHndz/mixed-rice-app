@@ -17,11 +17,15 @@ class OrderRepositoryImpl(
         return orderLocalDataSource.getOrders()
     }
 
-    override suspend fun clearOrder() {
-        orderLocalDataSource.clearOrder()
+    override suspend fun clearOrderList() {
+        orderLocalDataSource.clearOrderList()
     }
 
     override suspend fun updateOrder(order: Order) {
         orderLocalDataSource.updateOrder(order)
+    }
+
+    override suspend fun deleteOrderFromList(order: Order) {
+        orderLocalDataSource.deleteOrderFromList(order)
     }
 }

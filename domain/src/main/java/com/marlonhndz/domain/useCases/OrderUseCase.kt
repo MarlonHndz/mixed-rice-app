@@ -15,11 +15,15 @@ class OrderUseCase(
         return orderRepository.getOrders()
     }
 
-    suspend fun clearOrder() {
-        return orderRepository.clearOrder()
+    suspend fun clearOrderList() {
+        orderRepository.clearOrderList()
     }
 
     suspend fun updateOrder(order: Order) {
-        return orderRepository.updateOrder(order)
+        orderRepository.updateOrder(order)
+    }
+
+    suspend fun deleteOrderFromList(order: Order) {
+        orderRepository.deleteOrderFromList(order)
     }
 }

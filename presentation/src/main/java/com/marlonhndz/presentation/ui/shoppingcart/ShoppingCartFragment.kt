@@ -61,7 +61,7 @@ class ShoppingCartFragment : Fragment() {
 
         binding.btnEmptyCart.setOnClickListener {
             shoppingCartAdapter.removeAllItems()
-            shoppingCartViewModel.clearOrder()
+            shoppingCartViewModel.clearOrderList()
         }
     }
 
@@ -79,6 +79,11 @@ class ShoppingCartFragment : Fragment() {
 
             override fun onQuantityChanged(newOrder: Order) {
                 shoppingCartViewModel.updateOrder(newOrder)
+            }
+
+            override fun deleteOrderFromList(order: Order) {
+                shoppingCartViewModel.deleteOrderFromList(order)
+                loadData()
             }
         })
     }

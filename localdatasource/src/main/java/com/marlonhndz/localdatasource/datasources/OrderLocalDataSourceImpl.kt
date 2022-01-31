@@ -28,11 +28,15 @@ class OrderLocalDataSourceImpl(
         }
     }
 
-    override suspend fun clearOrder() {
+    override suspend fun clearOrderList() {
         appDatabase.orderDao().clearTable()
     }
 
     override suspend fun updateOrder(order: Order) {
         appDatabase.orderDao().updateOrder(orderToOrderLocalMapper(order))
+    }
+
+    override suspend fun deleteOrderFromList(order: Order) {
+        appDatabase.orderDao().delete(orderToOrderLocalMapper(order))
     }
 }
