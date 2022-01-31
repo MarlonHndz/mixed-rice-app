@@ -3,6 +3,7 @@ package com.marlonhndz.data.di
 import com.marlonhndz.data.mappers.MenuResponseToAmountsByProductMapper
 import com.marlonhndz.data.mappers.MenuResponseToProductsLocalMapper
 import com.marlonhndz.data.mappers.OrderLocalToOrderMapper
+import com.marlonhndz.data.mappers.OrderToOrderLocalMapper
 import com.marlonhndz.data.mappers.ProductToOrderLocalMapper
 import com.marlonhndz.data.mappers.ProductsWithAmountsLocalToProductMapper
 import com.marlonhndz.data.repositories.OrderRepositoryImpl
@@ -22,4 +23,5 @@ val dataModule = module {
     factory { ProductsWithAmountsLocalToProductMapper() }
     factory { ProductToOrderLocalMapper() }
     factory { OrderLocalToOrderMapper() }
+    factory { OrderToOrderLocalMapper() }
 }

@@ -1,5 +1,7 @@
 package com.marlonhndz.presentation.ui.shoppingcart
 
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -32,12 +34,22 @@ class ShoppingCartAdapter : RecyclerView.Adapter<ShoppingCartAdapter.ViewHolder>
                 rootShoppingCartItem.setOnClickListener {
                     listener?.itemClicked(order)
                 }
+
+                addOrRemoveUnitView.setOnTextChangedListener(object : TextWatcher {
+                    override fun afterTextChanged(s: Editable?) {}
+                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                        order.quantity = s.toString().toInt()
+                        listener?.onQuantityChanged(order)
+                    }
+                })
             }
         }
     }
 
     interface Listener {
         fun itemClicked(order: Order)
+        fun onQuantityChanged(newOrder: Order)
     }
 
     fun addListener(listener: Listener) {

@@ -18,4 +18,8 @@ class OrderUseCase(
     suspend fun clearOrder() {
         return orderRepository.clearOrder()
     }
+
+    suspend fun updateOrder(order: Order) {
+        return orderRepository.updateOrder(order)
+    }
 }

@@ -1,6 +1,7 @@
 package com.marlonhndz.presentation.ui.customViews
 
 import android.content.Context
+import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
@@ -57,5 +58,9 @@ class AddOrRemoveUnitView @JvmOverloads constructor(
     fun setQuantity(productQuantity: Int) {
         quantity = productQuantity
         binding.tvQuantityOfProducts.text = quantity.toString()
+    }
+
+    fun setOnTextChangedListener(textWatcher: TextWatcher) {
+        binding.tvQuantityOfProducts.addTextChangedListener(textWatcher)
     }
 }

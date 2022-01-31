@@ -1,7 +1,8 @@
 package com.marlonhndz.domain.models
 
 data class Order(
+    val id: Long,
     val product: Product,
     val amount: Amount,
-    val quantity: Int
+    var quantity: Int
 )

@@ -9,8 +9,9 @@ import com.marlonhndz.domain.models.ProductType
 
 class OrderLocalToOrderMapper {
 
-    operator fun invoke(productLocal: ProductLocal, amountLocal: AmountLocal, productQuantity: Int) =
+    operator fun invoke(orderId: Long, productLocal: ProductLocal, amountLocal: AmountLocal, productQuantity: Int) =
         Order(
+            id = orderId,
             product = Product(
                 id = productLocal.productId,
                 name = productLocal.name,

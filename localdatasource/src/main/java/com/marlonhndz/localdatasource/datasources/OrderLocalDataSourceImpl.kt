@@ -2,6 +2,7 @@ package com.marlonhndz.localdatasource.datasources
 
 import com.marlonhndz.data.datasources.localdatasource.OrderLocalDataSource
 import com.marlonhndz.data.mappers.OrderLocalToOrderMapper
+import com.marlonhndz.data.mappers.OrderToOrderLocalMapper
 import com.marlonhndz.data.mappers.ProductToOrderLocalMapper
 import com.marlonhndz.domain.models.Order
 import com.marlonhndz.domain.models.Product
@@ -10,7 +11,8 @@ import com.marlonhndz.localdatasource.AppDatabase
 class OrderLocalDataSourceImpl(
     private val appDatabase: AppDatabase,
     private val productToOrderLocalMapper: ProductToOrderLocalMapper,
-    private val orderLocalToOrderMapper: OrderLocalToOrderMapper
+    private val orderLocalToOrderMapper: OrderLocalToOrderMapper,
+    private val orderToOrderLocalMapper: OrderToOrderLocalMapper
 ) : OrderLocalDataSource {
 
     override suspend fun addProductToOrder(product: Product, productQuantity: Int) {
@@ -18,15 +20,19 @@ class OrderLocalDataSourceImpl(
     }
 
     override suspend fun getOrders(): List<Order> {
-        val orders = appDatabase.orderDao().getAll()
-        return orders.map {
+        val ordersLocal = appDatabase.orderDao().getAll()
+        return ordersLocal.map {
             val orderedProduct = appDatabase.productDao().getProductByID(it.productId)
             val orderedAmount = appDatabase.amountDao().getAmountByID(it.amountId)
-            orderLocalToOrderMapper(orderedProduct, orderedAmount, it.productQuantity)
+            orderLocalToOrderMapper(it.orderId, orderedProduct, orderedAmount, it.productQuantity)
         }
     }
 
     override suspend fun clearOrder() {
         appDatabase.orderDao().clearTable()
+    }
+
+    override suspend fun updateOrder(order: Order) {
+        appDatabase.orderDao().updateOrder(orderToOrderLocalMapper(order))
     }
 }

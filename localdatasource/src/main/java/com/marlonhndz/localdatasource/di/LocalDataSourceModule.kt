@@ -16,5 +16,5 @@ val localDataSourceModule = module {
 
     // DataSources
     factory<ProductLocalDataSource> { ProductLocalDataSourceImpl(get(), get(), get(), get()) }
-    factory<OrderLocalDataSource> { OrderLocalDataSourceImpl(get(), get(), get()) }
+    factory<OrderLocalDataSource> { OrderLocalDataSourceImpl(get(), get(), get(), get()) }
 }

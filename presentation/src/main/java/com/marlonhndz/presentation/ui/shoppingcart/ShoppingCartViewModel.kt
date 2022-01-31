@@ -35,4 +35,12 @@ class ShoppingCartViewModel(
             }
         }
     }
+
+    fun updateOrder(newOrder: Order) {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                orderUseCase.updateOrder(newOrder)
+            }
+        }
+    }
 }

@@ -76,6 +76,10 @@ class ShoppingCartFragment : Fragment() {
             override fun itemClicked(order: Order) {
                 // TODO
             }
+
+            override fun onQuantityChanged(newOrder: Order) {
+                shoppingCartViewModel.updateOrder(newOrder)
+            }
         })
     }
 
