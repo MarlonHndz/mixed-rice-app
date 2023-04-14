@@ -25,6 +25,6 @@ I'm using **Android DataBinding** and **View Binding**
 - **Unit Testing**: Created unit test for each Module.
 
 ## Architecture
-- Using **Clean Architechture** for the whole application and using **MVVM** for the presentation layer.
+- Using **Clean Architecture** for the whole application and using **MVVM** for the presentation layer.
 
 ![Clean Arch](https://user-images.githubusercontent.com/16215046/122849576-5e7a4000-d2d1-11eb-90a2-556d0bcb5225.png)
